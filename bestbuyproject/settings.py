@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-g1b%e86rswtcx19q5qipxja)k(x=mu6qd15p$*79c!d2#-n_w&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -90,13 +90,8 @@ AUTH_USER_MODEL = 'accounts.Account'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME'  : 'mydatabase',
-         'USER'  : 'postgres',
-         'PASSWORD' : '12345',
-         'HOST' : 'localhost',
-         'PORT' : '5432',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
